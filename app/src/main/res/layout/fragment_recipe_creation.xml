@@ -40,7 +40,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/name"
-            style="@style/fullWidthTextInputLayout">
+            style="@style/fullWidthTextInputLayout"
+            android:hint="@string/recipe_name">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/recipeName"
@@ -54,7 +55,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/txtRecipeDescription"
-            style="@style/fullWidthTextInputLayout">
+            style="@style/fullWidthTextInputLayout"
+            android:hint="@string/recipe_description">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtRecipeDescriptionInput"
@@ -70,7 +72,7 @@
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/txtTime"
             style="@style/fullWidthTextInputLayout"
-            app:suffixText="@string/recipe_time_suffix">
+            app:suffixText="Minutes">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/txtTimeInput"
@@ -85,7 +87,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/txtRecipe"
-            style="@style/fullWidthTextInputLayout">
+            style="@style/fullWidthTextInputLayout"
+            android:hint="@string/recipe_text">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/recipeEnterField"

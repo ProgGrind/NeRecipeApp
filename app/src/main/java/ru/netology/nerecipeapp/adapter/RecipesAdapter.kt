@@ -58,7 +58,6 @@ class RecipesAdapter(
 
         init {
             binding.recipeName.setOnClickListener { listener.onRecipeCardClicked(recipe) }
-            binding.recipeTime.setOnClickListener { listener.onRecipeCardClicked(recipe) }
             binding.recipeIcon.setOnClickListener { listener.onRecipeCardClicked(recipe) }
         }
 
@@ -70,7 +69,6 @@ class RecipesAdapter(
         fun bind(recipe: Recipe) {
             this.recipe = recipe
             with(binding) {
-                recipeTime.text = recipe.time
                 recipeName.text = recipe.name
                 like.isChecked = recipe.like
             }

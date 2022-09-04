@@ -1,20 +1,23 @@
-package ru.netology.nerecipeapp.db
+package ru.netology.nerecipeapp.data
 
 import android.app.Application
 import android.content.Context
 import androidx.core.content.edit
 import androidx.lifecycle.MutableLiveData
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import kotlinx.serialization.decodeFromString
 import kotlinx.serialization.encodeToString
 import kotlinx.serialization.json.Json
-import ru.netology.nerecipeapp.data.Category
-import ru.netology.nerecipeapp.data.Recipe
-import ru.netology.nerecipeapp.data.RecipeRepository
 import kotlin.properties.Delegates
 
-class SharedPrefsRecipeRepository(
+class FileRecipeRepository(
     application: Application
 ) : RecipeRepository {
+
+    private val gson = Gson()
+    private val type = TypeToken.getParameterized(List::class.java, Recipe::class.java).type
+
 
     private val prefs = application.getSharedPreferences(
         "repo", Context.MODE_PRIVATE

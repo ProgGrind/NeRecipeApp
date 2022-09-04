@@ -6,20 +6,29 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.map
 import ru.netology.nerecipeapp.adapter.RecipeInteractionListener
 import ru.netology.nerecipeapp.data.Category
+import ru.netology.nerecipeapp.data.FileRecipeRepository
 import ru.netology.nerecipeapp.data.Recipe
 import ru.netology.nerecipeapp.data.RecipeRepository
-import ru.netology.nerecipeapp.db.SharedPrefsRecipeRepository
+
 import ru.netology.nerecipeapp.util.SingleLiveEvent
 
 class RecipeViewModel(
     application: Application
 ) : AndroidViewModel(application), RecipeInteractionListener {
 
-    private val repository: RecipeRepository = SharedPrefsRecipeRepository(application)
+    private val repository: RecipeRepository = FileRecipeRepository(application)
 
-    val data = repository.data.map { list ->
-        list.filter { categoriesFilter.contains(it.category) }
-    }
+    val data get() = repository.data
+
+//    val data = repository.data.map { list ->
+//        list.filter { categoriesFilter.contains(it.category) }
+//    }
+
+//    private val repository: RecipeRepository = SharedPrefsRecipeRepository(application)
+//
+//    val data = repository.data.map { list ->
+//        list.filter { categoriesFilter.contains(it.category) }
+//    }
     val recipeViewEvent = SingleLiveEvent<Long>()
     val navigateToRecipeCreationFragmentEvent = SingleLiveEvent<Recipe?>()
     private val currentRecipe = MutableLiveData<Recipe?>(null)
