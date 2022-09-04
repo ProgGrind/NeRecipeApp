@@ -36,8 +36,6 @@ class RecipeViewFragment : Fragment() {
                 binding.textTime.text = detailedRecipe.time
                 binding.recipeDetailName.text = detailedRecipe.name
                 binding.recipeCategory.text = detailedRecipe.category.toString()
-                binding.recipeDetailImage.setImageResource(R.drawable.ic_test)
-
             }
 
         }.root
