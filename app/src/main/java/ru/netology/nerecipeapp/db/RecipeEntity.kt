@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import ru.netology.nerecipeapp.data.Category
 
-@Entity(tableName = "posts")
+@Entity(tableName = "recipes")
 class RecipeEntity (
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "id")
@@ -16,7 +16,7 @@ class RecipeEntity (
     val description: String,
     val time: String,
     val recipe: String,
-    @ColumnInfo(name = "likedByMe")
+//    @ColumnInfo(name = "likedByMe")
     val like: Boolean = false,
     val picture: String = ""
 //    val likedByMe: Boolean = false,

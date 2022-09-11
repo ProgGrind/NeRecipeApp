@@ -125,7 +125,7 @@ class RecipeCreationFragment : Fragment() {
             || recipe.description.isBlank()
             || recipe.time.isBlank()
         ) {
-            Toast.makeText(activity, "Заполните все поля", Toast.LENGTH_LONG).show()
+            Toast.makeText(activity, "Fill all of the fields", Toast.LENGTH_LONG).show()
             false
         } else true
     }

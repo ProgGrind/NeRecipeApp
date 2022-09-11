@@ -103,7 +103,7 @@ class MainFragment : Fragment() {
                     viewModel.searchRecipe(newText)
 
                     if (recipeList.isEmpty()) {
-                        Toast.makeText(context, "Ничего нет", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(context, "Nothing to show", Toast.LENGTH_SHORT).show()
                         adapter.submitList(recipeList)
                     } else {
                         adapter.submitList(recipeList)
