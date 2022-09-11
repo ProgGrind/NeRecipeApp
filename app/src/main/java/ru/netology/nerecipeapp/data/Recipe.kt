@@ -17,15 +17,3 @@ data class Recipe(
     val like: Boolean = false,
     val picture: String = ""
 ) : Parcelable
-
-//@Serializable
-//@Parcelize
-//enum class Category : Parcelable {
-//    European,
-//    Asian,
-//    Panasian,
-//    Oriental,
-//    American,
-//    Russian,
-//    Mediterranean
-//}
