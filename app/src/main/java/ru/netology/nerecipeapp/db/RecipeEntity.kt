@@ -16,7 +16,6 @@ class RecipeEntity (
     val description: String,
     val time: String,
     val recipe: String,
-//    @ColumnInfo(name = "likedByMe")
     val like: Boolean = false,
     val picture: String = ""
 //    val likedByMe: Boolean = false,
