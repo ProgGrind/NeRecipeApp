@@ -26,11 +26,17 @@ class RecipeViewModel(
     private var categoriesFilter: List<Category> = Category.values().toList()
     var setCategoryFilter = false
 
-    var likeFilter: MutableLiveData<Boolean> = MutableLiveData()
 
-    init {
-        likeFilter.value = false
-    }
+//    var likeFilter: MutableLiveData<Boolean> = MutableLiveData()
+//    var filterFilter: MutableLiveData<Boolean> = MutableLiveData()
+//
+//    init {
+//        likeFilter.value = false
+//    }
+//
+//    init {
+//        filterFilter.value = false
+//    }
 
 
     fun onSaveButtonClicked(recipe: Recipe) {
